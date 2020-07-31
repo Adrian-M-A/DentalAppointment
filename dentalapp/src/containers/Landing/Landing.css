@@ -49,7 +49,9 @@
 }
 
 #emailInputLanding::placeholder{
-    color: #94c6ce;
+    color: #48bacc;
+    font-size: large;
+    font-weight: bold;
 }
 
 #sponsors{
@@ -74,7 +76,7 @@
     color: white;
     font-weight: bold;
     font-size: large;
-    box-shadow: 0rem 0.1rem 1.5rem 94c6ce;
+    box-shadow: 0rem 0.1rem 1.5rem rgb(149, 175, 166);
     transition: all ease 0.2s;
 }
 

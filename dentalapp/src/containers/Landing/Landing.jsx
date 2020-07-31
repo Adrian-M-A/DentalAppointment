@@ -1,4 +1,6 @@
 import React from 'react';
+import Register from '../../components/Register/Register.jsx';
+
 import './Landing.css';
 import logo from '../../img/logo.jpg';
 import sponsors from '../../img/partners.png';
@@ -35,7 +37,7 @@ class Landing extends React.Component {
                             <img className="icon" id="maskIcon" src={health} alt="Icono de mascarilla"/>
                             <div id="blockContent1">
                                 <div id="titleSpanMotive">Con las mejores condiciones sanitarias</div>
-                                <div id="subtitleSpanMotive">Nuestros centros se desinfectan entre sesiones todos los días con ozono.</div>
+                                <div id="subtitleSpanMotive">Nuestros centros se desinfectan con ozono entre sesiones todos los días.</div>
                             </div>
                         </div>
                         <div id="secondMotive">
@@ -49,13 +51,13 @@ class Landing extends React.Component {
                             <img className="icon" id="icon3" src={science} alt="Icono de ADN"/>
                             <div id="blockContent3">
                                 <div id="titleSpanMotive">Con los últimos avances</div>
-                                <div id="subtitleSpanMotive">Contamos con la última tecnología en prevención del dolor para la mejora de tus dientes. </div>
+                                <div id="subtitleSpanMotive">Contamos con la última tecnología en prevención del dolor para la mejorar tu salud dental. </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section className="section" id="third">
-
+                    <Register />
                 </section>
             </div>
         )
