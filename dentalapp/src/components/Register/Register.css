@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     height: 55rem;
-    margin-top: -7rem;
 }
 
 #registerWindow {
@@ -13,7 +12,7 @@
     flex-direction: column;
     box-shadow: 0.2rem 0.2rem 1rem black ;
     border-radius: 1rem;
-    width: 50rem;
+    width: 70rem;
     height: 38rem;
 }
 
@@ -26,30 +25,27 @@
 #registerHeader{
     display: flex;
     justify-content: center;
-    width: 50rem;
+    width: 70rem;
     height: 8rem;
-    border-radius: 1rem 1rem 0rem 0rem;
-    background-color: #96c9cd;
 }
 
 #registerLogoImage{
     display: flex;
-    align-self: center;
-    
-    height: 10rem; 
-    width: 20rem;
+    align-self: center; 
+    width: 8rem;
+    padding-top: 2rem;
 }
 
 #registerFormInputs{
     display: flex;
     justify-content: flex-start;
-    width: 50rem;
+    width: 70rem;
 }
 
 #registerForm {
     display: flex;
     flex-direction: row;    
-    width: 50rem;
+    width: 70rem;
 }
 
 #registerFormLeft {
@@ -57,7 +53,7 @@
     justify-content: center;
     flex-direction: column;
     align-content: center;
-    width: 25rem;
+    width: 50%;
     padding: 2rem;
 }
 #registerFormRight {
@@ -66,7 +62,7 @@
     flex-direction: column;
     align-content: center;
     padding: 2rem;
-    width: 25rem;
+    width: 50%;
 }
 
 #nameinput, #surnamesinput, #addressinput, #phoneinput, #documentinput,
@@ -74,7 +70,7 @@
     display: flex;
     margin: 1rem;
     padding: 0.5rem;
-    border: 0.1rem solid #96c9cd;
+    border: 0.1rem solid #00abc7;
     border-top: 0rem;
     border-left: 0rem;
     border-right: 0rem;
@@ -87,44 +83,40 @@
 }
 
 #registerH2{
-    color: #917aa4;
+    color: #00abc7;
+    text-align: center;
     margin-top: 2rem;
     margin-bottom: 0rem;
 }
 
-button{
-    background-color: #917aa4;
-    border: 0.2rem solid #917aa4;
+#registerButton{
+    background-color: #00abc7;
+    border: 0.2rem solid #00abc7;
     border-radius: 0.5rem;
     height: 3rem;
     padding: 0.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     font-size: large;
-    color: #f3ebc6;
-    margin-top: 2rem;
-}
-
-button:hover{
-    background-color: #9c83b1;
-    border: 0.2rem solid #9c83b1;
     color: white;
-}
-
-#registerButton{
-    border: 0.2rem solid #96c9cd;
-    background-color: #96c9cd;
-    color: #917aa4;
+    margin-top: 2rem;
+    box-shadow: 0rem 0.1rem 1.5rem rgb(149, 175, 166);
+    transition: all ease 0.2s;
 }
 
 #registerButton:hover{
+    background-color: #03bedb;
+    border: 0.2rem solid #03bedb;
     color: white;
+    box-shadow: 0rem 0.5rem 1.5rem rgb(149, 175, 166);
 }
 
 #errorPassword, #errorPasswords, #errorName, #errorSurnames, #errorDocument, #errorRegister,
 #errorAddress, #errorPhone, #errorEmail {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:red;
+    display: flex;
+    justify-content: center;
 }
 
 #errorRegister{

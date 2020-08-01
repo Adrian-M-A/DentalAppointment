@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./Register.css";
+import logo from '../../img/logo.jpg';
 
 class Register extends React.Component {
     constructor(props){
@@ -113,9 +114,10 @@ class Register extends React.Component {
                     <div id="windowContent">
                         <div id="registerHeader">
                             <div id="registerLogoImage">
+                                <img id="logoHeader" src={logo} alt="Imagen del logo" />
                             </div>
                         </div> 
-                        <h2 id="registerH2">Rellena tus datos para poder acceder a nuestra mejor oferta</h2>
+                        <h2 id="registerH2">Rellena con tus datos para pedir cita.</h2>
                         <div id="registerFormInputs">
                             <form id="registerForm" onSubmit={this.handleSubmit}>
                                 <div id="registerFormLeft">
@@ -137,7 +139,7 @@ class Register extends React.Component {
                                     <span id="errorPassword">{this.state.errorPassword}</span>
                                     <input type="password" name="password2" id="password2Input" value={this.state.password2} onChange={this.handleChange} placeholder="Repite tu contraseña" />
                                     <span id="errorPasswords">{this.state.errorPasswords}</span>
-                                    <button type="submit">Registrar</button>
+                                    <button id="registerButton" type="submit">Registrar</button>
                                     <span id="errorRegister">{this.state.errorRegister}</span>
                                 </div>
                             </form>
