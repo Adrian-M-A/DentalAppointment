@@ -80,14 +80,17 @@ class Register extends React.Component {
             password: this.state.password
         };
 
-        axios.post("http://localhost:3001/users/register", body)
+        axios.post("http://localhost:8000/api/user/signup", body)
         .then(res => {
             setTimeout(() => {
                 this.props.history.push('/login');
             }, 500);
         })
         .catch(error => {
-            console.error(error)
+            console.error(error);
+            // if(error.errors.email[0] === "The email has already been taken."){
+            //     return this.setState({errorRegister: "Email en uso, no ha sido posible registrarlo."});
+            // }
             this.setState({errorRegister: "No ha sido posible registrarlo."});
         })
     };
