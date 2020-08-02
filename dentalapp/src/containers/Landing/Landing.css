@@ -117,6 +117,10 @@
     height: 3rem;
 }
 
+#third{
+    padding: 2rem 0 0 0;
+}
+
 #firstMotive, #secondMotive, #thirdMotive{
     display: flex;
     justify-content: flex-end;

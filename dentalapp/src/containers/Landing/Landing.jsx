@@ -9,7 +9,17 @@ import safety from '../../img/safety.png';
 import science from '../../img/science.png';
 
 class Landing extends React.Component {
+    constructor(props){
+        super(props);
 
+        this.state = {
+            email: "",
+        }
+    };
+
+    handleChange = (ev) =>{
+        this.setState({[ev.target.name]: ev.target.type === 'string' ? +ev.target.value : ev.target.value}); 
+    }
 
     render(){
         return (
@@ -20,7 +30,7 @@ class Landing extends React.Component {
                         <h2 className="title" id="firstTitle">Tu bienestar <br></br> es nuestra prioridad</h2>
                         <h3 className="subtitle" id="firstSubtitle">Ponte en manos de nuestros profesionales.
                         <br></br>Y luce tu sonrisa más radiante.</h3>
-                        <input type="email" id="emailInputLanding" placeholder="Tu correo electrónico" autoFocus /> 
+                        <input type="email" name="email" value={this.state.email} onChange={this.handleChange} id="emailInputLanding" placeholder="Tu correo electrónico" autoFocus /> 
                         <button type="submit" id="orderButtonLanding">Pide cita</button>
                         <div id="sponsors">Con los últimos avances
                             <img id="sponsorsLogo" src={sponsors} alt="Imágenes de los sponsors"/>
