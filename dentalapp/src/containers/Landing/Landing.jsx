@@ -17,6 +17,10 @@ class Landing extends React.Component {
         }
     };
 
+    login = () => {
+        this.props.history.push('/login');
+    }
+
     handleChange = (ev) =>{
         this.setState({[ev.target.name]: ev.target.type === 'string' ? +ev.target.value : ev.target.value}); 
     }
@@ -31,7 +35,7 @@ class Landing extends React.Component {
                         <h3 className="subtitle" id="firstSubtitle">Ponte en manos de nuestros profesionales.
                         <br></br>Y luce tu sonrisa más radiante.</h3>
                         <input type="email" name="email" value={this.state.email} onChange={this.handleChange} id="emailInputLanding" placeholder="Tu correo electrónico" autoFocus /> 
-                        <button type="submit" id="orderButtonLanding">Pide cita</button>
+                        <button type="submit" onClick={this.login} id="orderButtonLanding">Pide cita</button>
                         <div id="sponsors">Con los últimos avances
                             <img id="sponsorsLogo" src={sponsors} alt="Imágenes de los sponsors"/>
                         </div>

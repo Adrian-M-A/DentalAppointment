@@ -1,65 +1,59 @@
-#registerContainer{
+#loginContainer{
+    background-image: url("../../img/background1.jpg");
+    background-color: #e2ddfa;
     display: flex;
     justify-content: center;
     height: 55rem;
 }
 
-#registerWindow {
+#loginWindow {
     background-color: white;
     display: flex;
-    align-self: center;
     justify-content: center;
+    align-self: center;
     flex-direction: column;
     box-shadow: 0.2rem 0.2rem 1rem black ;
     border-radius: 1rem;
-    width: 70rem;
+    width: 35rem;
     height: 38rem;
 }
 
-#registerHeader{
+#loginwindowHeader{
     display: flex;
     justify-content: center;
-    width: 70rem;
     height: 8rem;
+    width: 35rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+    background-color: white;
 }
 
-#registerLogoImage{
+#loginLogoImage{
     display: flex;
-    align-self: center; 
+    align-self: center;
+    background-image: url("../../img/logo.jpg");   
     width: 8rem;
-    padding-top: 2rem;
+    margin-top: 1rem;
 }
 
-#registerFormInputs{
-    display: flex;
-    justify-content: flex-start;
-    width: 70rem;
+#loginH2{
+    text-align: center;
+    color: #00abc7;
+    padding: 1rem;
 }
 
-#registerForm {
+#loginForm {
     display: flex;
-    flex-direction: row;    
-    width: 70rem;
+    flex-direction: column;    
+    width: 20rem;
 }
 
-#registerFormLeft {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    padding: 2rem;
-}
-#registerFormRight {
+#loginFormInputs{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    padding: 2rem;
-    width: 50%;
 }
 
-#nameinput, #surnamesinput, #phoneinput,
-#emailInput, #password1Input, #password2Input{
-    display: flex;
+#loginEmailInput, #loginPasswordInput{
+    margin-left: 10rem;
     margin: 1rem;
     padding: 0.5rem;
     border: 0.1rem solid #00abc7;
@@ -74,14 +68,12 @@
     font-weight: bolder;
 }
 
-#registerH2{
-    color: #00abc7;
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 0rem;
+#errorLogin{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
 }
 
-#registerButton{
+#loginButton{
     background-color: #00abc7;
     border: 0.2rem solid #00abc7;
     border-radius: 0.5rem;
@@ -97,21 +89,32 @@
     cursor: pointer;
 }
 
-#registerButton:hover{
+#loginButton:hover{
     background-color: #03bedb;
     border: 0.2rem solid #03bedb;
     color: white;
     box-shadow: 0rem 0.5rem 1.5rem rgb(149, 175, 166);
 }
 
-#errorPassword, #errorPasswords, #errorName, #errorSurnames, #errorDocument, #errorRegister,
-#errorAddress, #errorPhone, #errorEmail {
+#registerButtonLogin{
+    background-color: white;
+    border: 0.1rem solid #4db5c5;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:red;
-    display: flex;
-    justify-content: center;
+    font-weight: bold;
+    font-size: large;
+    color: #74b9c4;
+    margin-top: 2rem;
+    box-shadow: 0rem 0.1rem 1.5rem rgb(149, 175, 166);
+    transition: all ease 0.2s;
+    cursor: pointer;
 }
 
-#errorRegister{
-    padding-top: 1rem;
+#registerButtonLogin:hover{
+    background-color: #4db5c5;
+    border: 0.2rem solid #4db5c5;
+    color: white;
+    box-shadow: 0rem 0.5rem 1.5rem rgb(149, 175, 166);
 }
