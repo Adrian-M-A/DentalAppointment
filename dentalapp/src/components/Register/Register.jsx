@@ -10,16 +10,12 @@ class Register extends React.Component {
         this.state = {
             name: "",
             surnames: "",
-            address: "",
             phone: "",
-            document: "",
             email: "",
             password: "",
             password2: "",
             errorName:"",
             errorSurnames:"",
-            errorAddress: "",
-            errorDocument: "",
             errorPhone:"",
             errorEmail:"",
             errorPassword: "",
@@ -38,38 +34,29 @@ class Register extends React.Component {
 
         this.setState({errorName:""});
         this.setState({errorSurnames:""});
-        this.setState({errorSurnames:""});
-        this.setState({errorAddress:""});
-        this.setState({errorDocument:""});
+        this.setState({errorPhone:""});
+        this.setState({errorEmail:""});
         this.setState({errorPassword:""});
         this.setState({errorPasswords:""});
         this.setState({errorRegister:""});
-        this.setState({errorPhone:""});
-        this.setState({errorEmail:""});
+        
 
         let nameRegex = new RegExp("[0-9]");
+        let surnamesRegex = new RegExp("[0-9]");
         let phoneRegex = new RegExp("[a-zA-Z]");
         let passwordRegex = new RegExp("^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})");
-        let dniRegex = new RegExp("^[0-9]{8,8}[A-Za-z]$");
+        
         //Error control
         if(this.state.name.length > 20 || this.state.name.length < 3 || nameRegex.test(this.state.name) || this.state.name === ""){
             this.setState({errorName: "Introduzca un nombre válido."});
             return;
         }
-        if(this.state.surnames.length > 35 || this.state.surnames.length < 3 || this.state.surnames === ""){
+        if(this.state.surnames.length > 35 || this.state.surnames.length < 3 || surnamesRegex.test(this.state.surnames) || this.state.surnames === ""){
             this.setState({errorSurnames: "Introduzca unos apellidos válidos."});
-            return;
-        }
-        if(this.state.address.length > 35 || this.state.address === ""){
-            this.setState({errorAddress: "Introduzca una dirección correcta."});    
             return;
         }
         if(this.state.phone.length < 9 || this.state.phone.length > 9|| this.state.phone === "" || phoneRegex.test(this.state.phone)){
             this.setState({errorPhone: "Introduzca un teléfono correcto."});
-            return;
-        }
-        if(!dniRegex.test(this.state.document) || this.state.document === ""){
-            this.setState({errorDocument: "El DNI introducido no es válido."});
             return;
         }
         if(this.state.email === ""){
@@ -88,9 +75,7 @@ class Register extends React.Component {
         let body = {
             name: this.state.name,
             surnames: this.state.surnames,
-            address: this.state.address,
             phone: this.state.phone,
-            document: this.state.document,
             email: this.state.email,
             password: this.state.password
         };
@@ -125,12 +110,8 @@ class Register extends React.Component {
                                     <span id="errorName">{this.state.errorName}</span>
                                     <input type="text" name="surnames" id="surnamesinput" value={this.state.surnames} onChange={this.handleChange} placeholder="Apellidos" />
                                     <span id="errorSurnames">{this.state.errorSurnames}</span>
-                                    <input type="text" name="address" id="addressinput" value={this.state.address} onChange={this.handleChange} placeholder="Dirección de envío" />
-                                    <span id="errorAddress">{this.state.errorAddress}</span>
                                     <input type="text" name="phone" id="phoneinput" value={this.state.phone} onChange={this.handleChange} placeholder="Teléfono" />
                                     <span id="errorPhone">{this.state.errorPhone}</span>
-                                    <input type="text" name="document" id="documentinput" value={this.state.document} onChange={this.handleChange} placeholder="DNI" />
-                                    <span id="errorDocument">{this.state.errorDocument}</span>
                                 </div>
                                 <div id="registerFormRight">
                                     <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
