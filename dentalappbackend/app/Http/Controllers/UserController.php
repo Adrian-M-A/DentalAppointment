@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -28,5 +29,16 @@ class UserController extends Controller
 
         $body['password'] = Hash ::make($body['password']);
         return User::create($body);
-    }   
+    }
+    
+    public function login(Request $request)
+    {
+        $credentials = $request->only('email','password');
+        if(!Auth::attempt($credentials)) {
+            return response()->json(['message' =>'Wrong credentials']);
+        }
+        $user =Auth::user();
+        $token = $user->createToken('authtoken')->accessToken;
+        return response()->json(['token' => $token, 'user' => $user], 200);
+    }
 }
