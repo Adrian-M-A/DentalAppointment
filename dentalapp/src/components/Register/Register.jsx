@@ -102,7 +102,7 @@ class Register extends React.Component {
                                 <img id="logoHeader" src={logo} alt="Imagen del logo" />
                             </div>
                         </div> 
-                        <h2 id="registerH2">Rellena con tus datos para pedir cita.</h2>
+                        <h2 id="registerH2">Rellena el formulario con tus datos para pedir cita.</h2>
                         <div id="registerFormInputs">
                             <form id="registerForm" onSubmit={this.handleSubmit}>
                                 <div id="registerFormLeft">
