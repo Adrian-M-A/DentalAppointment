@@ -22,3 +22,11 @@ Route::prefix('user')->group(function(){
     Route::post('signup', 'UserController@signup');
     Route::post('login', 'UserController@login');
 });
+
+Route::prefix('appointment')->group(function(){
+    Route::post('', 'TimepickerController@create');
+    Route::get('', 'TimepickerController@available');
+    Route::get('/{id}', 'TimepickerController@myAppointment');
+    Route::put('{id}', 'TimepickerController@update');
+    Route::delete('/{id}', 'TimepickerController@delete');
+});
