@@ -86,7 +86,6 @@ class Register extends React.Component {
             }, 500);
         })
         .catch(error => {
-            console.error(error);
             this.setState({errorRegister: "No ha sido posible registrarlo."});
         })
     };

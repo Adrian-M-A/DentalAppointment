@@ -14,20 +14,20 @@ class Login extends React.Component {
     };
 
     onSubmit = (event) =>{
+        this.setState({errorLogin:""});
+
         event.preventDefault();
         const credentials ={
             email: event.target.email.value,
             password: event.target.password.value
         }
         login(credentials)
-        .then((res) => {
+        .then(() => {
             this.props.history.push('/');
         })
-        .catch((error) => {
-            console.log(error);
-            this.setState({errorLogin: 'Usuario no registrado.'});
+        .catch(() => {
+            this.setState({errorLogin: 'Revise el email o la contraseña.'});
         })
-
     }
 
     register = () =>{
@@ -50,7 +50,7 @@ class Login extends React.Component {
                         <form id="loginForm" onSubmit={this.onSubmit}>
                             <input type="email" name="email" id="loginEmailInput" required placeholder="Introduce tu email"/>
                             <input type="password" name="password" id="loginPasswordInput" required placeholder="Introduce tu contraseña" />
-                            <span id="errorLogin">{this.errorLogin}</span>
+                            <span id="errorLogin">{this.state.errorLogin}</span>
                             <button id="loginButton" type="submit">Entrar</button>
                             <button id="registerButtonLogin" onClick={this.register}>Aún no estoy registrado</button>
                         </form>
