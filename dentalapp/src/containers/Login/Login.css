@@ -3,7 +3,7 @@
     background-color: #e2ddfa;
     display: flex;
     justify-content: center;
-    height: 55rem;
+    height: 58.5rem;
 }
 
 #loginWindow {
@@ -33,6 +33,7 @@
     background-image: url("../../img/logo.jpg");   
     width: 8rem;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 #loginH2{

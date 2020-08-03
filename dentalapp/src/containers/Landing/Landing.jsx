@@ -1,5 +1,4 @@
 import React from 'react';
-import Register from '../../components/Register/Register.jsx';
 
 import './Landing.css';
 import logo from '../../img/logo.jpg';
@@ -69,9 +68,6 @@ class Landing extends React.Component {
                             </div>
                         </div>
                     </div>
-                </section>
-                <section className="section" id="third">
-                    <Register />
                 </section>
             </div>
         )

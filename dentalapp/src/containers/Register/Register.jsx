@@ -87,20 +87,21 @@ class Register extends React.Component {
         })
         .catch(error => {
             console.error(error);
-            // if(error.errors.email[0] === "The email has already been taken."){
-            //     return this.setState({errorRegister: "Email en uso, no ha sido posible registrarlo."});
-            // }
             this.setState({errorRegister: "No ha sido posible registrarlo."});
         })
     };
 
+    landing = () =>{
+        this.props.history.push('/');
+    }
+
     render() {
-        return(
+    return(
             <div id="registerContainer" value="registerContainer">
                 <div id="registerWindow">
                     <div id="registerHeader">
                         <div id="registerLogoImage">
-                            <img id="logoHeader" src={logo} alt="Imagen del logo" />
+                            <img id="logoHeader" src={logo} alt="Imagen del logo" onClick={this.landing}/>
                         </div>
                     </div> 
                     <h2 id="registerH2">Rellena el formulario con tus datos para pedir cita.</h2>
@@ -127,7 +128,7 @@ class Register extends React.Component {
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> 
         )
     }
 };

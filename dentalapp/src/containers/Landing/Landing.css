@@ -116,34 +116,3 @@
 #maskIcon{
     height: 3rem;
 }
-
-#third{
-    padding: 2rem 0 0 0;
-}
-
-#firstMotive, #secondMotive, #thirdMotive{
-    display: flex;
-    justify-content: flex-end;
-}
-
-#blockContent1, #blockContent2, #blockContent3{
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    width: 20rem;
-}
-
-#titleSpanMotive{
-    font-weight: bold;
-    padding: 0 0 1rem 0 ;
-}
-
-#subtitleSpanMotive{
-    color: #94c6ce;
-    padding: 0 0 2rem;
-}
-
-
-#third{
-    background-image: url("../../img/background1.jpg");
-}

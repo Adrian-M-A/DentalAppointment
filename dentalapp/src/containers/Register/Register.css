@@ -1,7 +1,8 @@
 #registerContainer{
     display: flex;
     justify-content: center;
-    height: 55rem;
+    height: 58.5rem;
+    background-image: url('../../img/background1.jpg');
 }
 
 #registerWindow {
@@ -28,6 +29,7 @@
     align-self: center; 
     width: 8rem;
     padding-top: 2rem;
+    cursor: pointer;
 }
 
 #registerFormInputs{
