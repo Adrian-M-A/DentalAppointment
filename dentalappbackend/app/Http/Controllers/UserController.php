@@ -35,7 +35,7 @@ class UserController extends Controller
     {
         $credentials = $request->only('email','password');
         if(!Auth::attempt($credentials)) {
-            return response()->json(['message' =>'Wrong credentials']);
+            return response()->json(['message' =>'Wrong credentials'], 400);
         }
         $user =Auth::user();
         $token = $user->createToken('authtoken')->accessToken;

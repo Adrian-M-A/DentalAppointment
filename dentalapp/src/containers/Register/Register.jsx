@@ -20,8 +20,7 @@ class Register extends React.Component {
             errorEmail:"",
             errorPassword: "",
             errorPasswords: "",
-            errorRegister: "",
-            registered: false
+            errorRegister: ""
         }
     };
 
@@ -87,50 +86,48 @@ class Register extends React.Component {
             }, 500);
         })
         .catch(error => {
-            console.error(error);
-            // if(error.errors.email[0] === "The email has already been taken."){
-            //     return this.setState({errorRegister: "Email en uso, no ha sido posible registrarlo."});
-            // }
             this.setState({errorRegister: "No ha sido posible registrarlo."});
         })
     };
 
+    landing = () =>{
+        this.props.history.push('/');
+    }
+
     render() {
-        return(
-            <div id="registerContainer">
+    return(
+            <div id="registerContainer" value="registerContainer">
                 <div id="registerWindow">
-                    <div id="windowContent">
-                        <div id="registerHeader">
-                            <div id="registerLogoImage">
-                                <img id="logoHeader" src={logo} alt="Imagen del logo" />
-                            </div>
-                        </div> 
-                        <h2 id="registerH2">Rellena el formulario con tus datos para pedir cita.</h2>
-                        <div id="registerFormInputs">
-                            <form id="registerForm" onSubmit={this.handleSubmit}>
-                                <div id="registerFormLeft">
-                                    <input type="text" name="name" id="nameinput" value={this.state.name} onChange={this.handleChange} placeholder="Nombre"/>
-                                    <span id="errorName">{this.state.errorName}</span>
-                                    <input type="text" name="surnames" id="surnamesinput" value={this.state.surnames} onChange={this.handleChange} placeholder="Apellidos" />
-                                    <span id="errorSurnames">{this.state.errorSurnames}</span>
-                                    <input type="text" name="phone" id="phoneinput" value={this.state.phone} onChange={this.handleChange} placeholder="Teléfono" />
-                                    <span id="errorPhone">{this.state.errorPhone}</span>
-                                </div>
-                                <div id="registerFormRight">
-                                    <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
-                                    <span id="errorEmail">{this.state.errorEmail}</span>
-                                    <input type="password" name="password" id="password1Input" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
-                                    <span id="errorPassword">{this.state.errorPassword}</span>
-                                    <input type="password" name="password2" id="password2Input" value={this.state.password2} onChange={this.handleChange} placeholder="Repite tu contraseña" />
-                                    <span id="errorPasswords">{this.state.errorPasswords}</span>
-                                    <button id="registerButton" type="submit">Registrar</button>
-                                    <span id="errorRegister">{this.state.errorRegister}</span>
-                                </div>
-                            </form>
+                    <div id="registerHeader">
+                        <div id="registerLogoImage">
+                            <img id="logoHeader" src={logo} alt="Imagen del logo" onClick={this.landing}/>
                         </div>
+                    </div> 
+                    <h2 id="registerH2">Rellena el formulario con tus datos para pedir cita.</h2>
+                    <div id="registerFormInputs">
+                        <form id="registerForm" onSubmit={this.handleSubmit}>
+                            <div id="registerFormLeft">
+                                <input type="text" name="name" id="nameinput" value={this.state.name} onChange={this.handleChange} placeholder="Nombre"/>
+                                <span id="errorName">{this.state.errorName}</span>
+                                <input type="text" name="surnames" id="surnamesinput" value={this.state.surnames} onChange={this.handleChange} placeholder="Apellidos" />
+                                <span id="errorSurnames">{this.state.errorSurnames}</span>
+                                <input type="text" name="phone" id="phoneinput" value={this.state.phone} onChange={this.handleChange} placeholder="Teléfono" />
+                                <span id="errorPhone">{this.state.errorPhone}</span>
+                            </div>
+                            <div id="registerFormRight">
+                                <input type="email" name="email" id="emailInput" value={this.state.email} onChange={this.handleChange} placeholder="Introduce tu email"/>
+                                <span id="errorEmail">{this.state.errorEmail}</span>
+                                <input type="password" name="password" id="password1Input" value={this.state.password} onChange={this.handleChange} placeholder="Introduce tu contraseña" />
+                                <span id="errorPassword">{this.state.errorPassword}</span>
+                                <input type="password" name="password2" id="password2Input" value={this.state.password2} onChange={this.handleChange} placeholder="Repite tu contraseña" />
+                                <span id="errorPasswords">{this.state.errorPasswords}</span>
+                                <button id="registerButton" type="submit">Registrar</button>
+                                <span id="errorRegister">{this.state.errorRegister}</span>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </div>
+            </div> 
         )
     }
 };
