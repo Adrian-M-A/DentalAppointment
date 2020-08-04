@@ -1,5 +1,5 @@
 import React from 'react';
-import login from '../../services/redux/actions.js';
+import {login} from '../../services/redux/actions.js';
 
 import './Login.css';
 import logo from '../../img/logo.jpg';

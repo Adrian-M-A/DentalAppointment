@@ -1,7 +1,8 @@
-import { LOGIN, LOGOUT } from "./types/user";
+import { LOGIN, LOGOUT, APPOINTMENTSAVAILABLE } from "./types/user";
 
 const initialState = {
-    user: {}
+    user: {},
+    appointmentsAvailable: []
 }
 
 function reducer(state = initialState, action){
@@ -15,6 +16,11 @@ function reducer(state = initialState, action){
             return {
                 ...state,
                 user: {}
+            }
+        case APPOINTMENTSAVAILABLE:
+            return {
+                ...state,
+                appointmentsAvailable: action.payload
             }
         
         default:
