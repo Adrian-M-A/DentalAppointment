@@ -24,9 +24,12 @@ Route::prefix('user')->group(function(){
 });
 
 Route::prefix('appointment')->group(function(){
+    Route::middleware('auth:api')->group(function () {
+        Route::get('/my-appointment', 'TimepickerController@myAppointment');
+        Route::get('/available', 'TimepickerController@available');
+    });
     Route::post('', 'TimepickerController@create');
-    Route::get('', 'TimepickerController@available');
-    Route::get('/{id}', 'TimepickerController@myAppointment');
-    Route::put('{id}', 'TimepickerController@update');
+    Route::get('', 'TimepickerController@getAll');
+    Route::put('/{id}', 'TimepickerController@update');
     Route::delete('/{id}', 'TimepickerController@delete');
 });

@@ -1,0 +1,25 @@
+#appointmentContainer {
+    display: flex;
+    height: 58.5rem;
+    background-image: url('../../img/background1.jpg');
+    justify-content: center;
+}
+
+#appointmentWindow{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    border-radius: 1rem;
+    width: 100rem;
+    height: 50rem; 
+}
+
+#appointmentLogoImage{
+    display: flex;
+    width: 8rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}

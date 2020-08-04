@@ -23,7 +23,7 @@ class Login extends React.Component {
         }
         login(credentials)
         .then(() => {
-            this.props.history.push('/');
+            this.props.history.push('/appointment');
         })
         .catch(() => {
             this.setState({errorLogin: 'Revise el email o la contraseña.'});
