@@ -15,7 +15,7 @@ export const login = async(credentials) => {
 }
 
 export const appointmentsAvailable = async() =>{
-    const res = await axios.get(backURL + 'appointment/');
+    const res = await axios.get(backURL + 'appointment/available');
     store.dispatch({
         type: APPOINTMENTSAVAILABLE,
         payload: res.data

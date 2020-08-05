@@ -1,4 +1,13 @@
 .appointment{
     display: flex;
     height: 3rem;
+    width: 2rem;
+    margin-top: 1rem;
+}
+
+#appointmentHour, #appointmentDay,
+#appointmentMonth, #appointmentYear {
+    display: flex;
+    width: 3rem;
+    margin-right: 2rem;
 }

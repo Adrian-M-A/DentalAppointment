@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './services/redux/store.js';
+import './config/axios.js';
 
 ReactDOM.render(
   <React.StrictMode>

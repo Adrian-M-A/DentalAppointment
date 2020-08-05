@@ -17,9 +17,31 @@
     height: 50rem; 
 }
 
+#headerAppointmentContent{
+    display: flex;
+    justify-content: space-between;
+}
+
 #appointmentLogoImage{
     display: flex;
     width: 8rem;
     margin-top: 1rem;
+    cursor: pointer;
+}
+
+#logoutButton{
+    display: flex;
+    margin: 3rem;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    font-size: larger;
+    background-color: white;
+    color: #00abc7;
+    font-weight: bold;
+}
+
+#logoutButton:hover{
+    color: #00cdec;
     cursor: pointer;
 }

@@ -21,6 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('user')->group(function(){
     Route::post('signup', 'UserController@signup');
     Route::post('login', 'UserController@login');
+    Route::middleware('auth:api')->group(function () {
+        Route::get('logout', 'UserController@logout');
+    });
 });
 
 Route::prefix('appointment')->group(function(){
