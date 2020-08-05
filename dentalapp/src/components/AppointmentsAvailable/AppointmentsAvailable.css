@@ -1,7 +1,7 @@
 #appointmentsAvailable{
     display: flex;
     flex-direction: column;
-    height: 40%;
+    height: 30%;
 }
 
 #appointmentsAvailableHeader{
@@ -14,7 +14,19 @@
 
 #appointmentsAvailableData{
     display: flex;
+    justify-content: center;
     border: 1px solid #94c6ce;
     height:100%;
     margin: 1rem;
+}
+
+#appointments {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-left: 1rem;
+    width: 50%;
+    height: 100%;
 }

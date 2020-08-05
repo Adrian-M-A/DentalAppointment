@@ -21,18 +21,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('user')->group(function(){
     Route::post('signup', 'UserController@signup');
     Route::post('login', 'UserController@login');
-    Route::middleware('auth:api')->group(function () {
-        Route::get('logout', 'UserController@logout');
-    });
+    Route::get('logout', 'UserController@logout')->middleware('auth:api');
 });
 
 Route::prefix('appointment')->group(function(){
     Route::middleware('auth:api')->group(function () {
         Route::get('/my-appointment', 'TimepickerController@myAppointment');
         Route::get('/available', 'TimepickerController@available');
+        Route::put('/{id}', 'TimepickerController@update');
     });
     Route::post('', 'TimepickerController@create');
     Route::get('', 'TimepickerController@getAll');
-    Route::put('/{id}', 'TimepickerController@update');
     Route::delete('/{id}', 'TimepickerController@delete');
 });

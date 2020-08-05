@@ -6,6 +6,7 @@ import axios from 'axios';
 import './Appointment.css';
 import logo from '../../img/logo.jpg';
 import backURL from '../../config/api.js';
+import { connect } from 'react-redux';
 
 class Appointment extends React.Component {
     
@@ -19,13 +20,10 @@ class Appointment extends React.Component {
         axios.get(backURL + 'user/logout')
         .then(res => {
             localStorage.removeItem('authToken');
-            setTimeout(() => {
-                this.props.history.push('/login');
-            }, 500);
+            this.props.history.push('/login');
         })
         .catch(error => {
             console.error(error)
-            this.setState({errorRegister: "No ha sido posible registrarlo."});
         })
     }
 
@@ -35,7 +33,10 @@ class Appointment extends React.Component {
                 <div id="appointmentWindow">
                     <div id="headerAppointmentContent">
                         <img id="appointmentLogoImage" src={logo} alt="Imagen del logo" onClick={this.landing} />
-                        <button id="logoutButton" onClick={this.logout}>Salir</button>
+                        <div id="userInfo">
+                            <div id="salutation"> Bienvenido {this.props.user?.name} </div>
+                            <button id="logoutButton" onClick={this.logout}>Salir</button>
+                        </div>
                     </div>
                     <AppointmentsAvailable />
                     <PersonalAppointments />
@@ -45,4 +46,5 @@ class Appointment extends React.Component {
     }
 }
 
-export default Appointment;
+const mapStateToProps = ({user}) => ({user:user});
+export default connect(mapStateToProps)(Appointment);

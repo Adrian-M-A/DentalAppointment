@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { appointmentsAvailable } from '../../services/redux/actions.js';
 import AppointmentItem from '../AppointmentItem/AppointmentItem.jsx';
 
@@ -25,5 +25,5 @@ class AppointmentsAvailable extends React.Component{
         )
     }
 }
-const mapStateToProps = ({appointmentsAvailable}) => ({appointmentsAvailable:appointmentsAvailable})
+const mapStateToProps = ({appointmentsAvailable}) => ({appointmentsAvailable:appointmentsAvailable});
 export default connect(mapStateToProps)(AppointmentsAvailable);
