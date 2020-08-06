@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Landing from './containers/Landing/Landing.jsx'
 import Login from './containers/Login/Login.jsx';
 import Register from './containers/Register/Register.jsx';
+import Appointment from './containers/Appointment/Appointment.jsx';
 
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' component={Landing} exact />
         <Route path='/login' component={Login} exact />
         <Route path='/register' component={Register} exact />
+        <Route path='/appointment' component={Appointment} exact />
       </Switch>
     </Router>
   );

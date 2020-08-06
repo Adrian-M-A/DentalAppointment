@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Timepicker extends Model
 {
-    protected $fillable = ['day', 'month', 'year', 'user_id'];
+    protected $fillable = ['hour', 'day', 'month', 'year', 'available', 'user_id'];
     
     public function user()
     {

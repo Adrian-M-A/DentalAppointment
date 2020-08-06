@@ -30,7 +30,6 @@
 #loginLogoImage{
     display: flex;
     align-self: center;
-    background-image: url("../../img/logo.jpg");   
     width: 8rem;
     margin-top: 1rem;
     cursor: pointer;

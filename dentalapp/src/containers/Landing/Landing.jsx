@@ -1,4 +1,5 @@
 import React from 'react';
+import { storeEmail } from '../../services/redux/actions.js';
 
 import './Landing.css';
 import logo from '../../img/logo.jpg';
@@ -16,8 +17,13 @@ class Landing extends React.Component {
         }
     };
 
-    login = () => {
+    componentDidMount(){
+        this.setState({email: ""})
+    }
+
+    login = (email) => {
         this.props.history.push('/login');
+        storeEmail(email);
     }
 
     handleChange = (ev) =>{
@@ -34,7 +40,7 @@ class Landing extends React.Component {
                         <h3 className="subtitle" id="firstSubtitle">Ponte en manos de nuestros profesionales.
                         <br></br>Y luce tu sonrisa más radiante.</h3>
                         <input type="email" name="email" value={this.state.email} onChange={this.handleChange} id="emailInputLanding" placeholder="Tu correo electrónico" autoFocus /> 
-                        <button type="submit" onClick={this.login} id="orderButtonLanding">Pide cita</button>
+                        <button type="submit" onClick={() => this.login(this.state.email)} id="orderButtonLanding">Pide cita</button>
                         <div id="sponsors">Con los últimos avances
                             <img id="sponsorsLogo" src={sponsors} alt="Imágenes de los sponsors"/>
                         </div>

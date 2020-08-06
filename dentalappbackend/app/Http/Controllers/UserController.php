@@ -41,4 +41,11 @@ class UserController extends Controller
         $token = $user->createToken('authtoken')->accessToken;
         return response()->json(['token' => $token, 'user' => $user], 200);
     }
+
+    public function logout(Request $request){
+        $request->user()->token()->revoke();
+        return response([
+            'message' => 'User successfully logged out.'
+        ]);
+    }
 }
