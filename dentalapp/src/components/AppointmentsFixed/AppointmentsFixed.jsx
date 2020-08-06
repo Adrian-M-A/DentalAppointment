@@ -1,9 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { personalAppointment } from '../../services/redux/actions.js';
-import FixedAppointmentItem from '../FixedAppointmentItem/FixedAppointmentItem.jsx';
+import AppointmentFixedItem from '../AppointmentFixedItem/AppointmentFixedItem.jsx';
 
-import './FixedAppointments.css';
+import './AppointmentsFixed.css';
 
 class PersonalAppointments extends React.Component{
 
@@ -17,13 +17,13 @@ class PersonalAppointments extends React.Component{
                 <div id="fixedAppointmentsHeader">Citas confirmadas</div>
                 <div id="fixedAppointmentsData">
                     <div id="appointments">
-                        {this.props.fixedAppointments?.map(fixedAppointment => <FixedAppointmentItem 
-                        key={fixedAppointment.id} fixedAppointment={fixedAppointment} />)}
+                        {this.props.appointmentsFixed?.map(appointmentFixed => <AppointmentFixedItem 
+                        key={appointmentFixed.id} appointmentFixed={appointmentFixed} />)}
                     </div>
                 </div>
             </div>
         )
     }
 }
-const mapStateToProps = ({fixedAppointments}) => ({fixedAppointments:fixedAppointments})
+const mapStateToProps = ({appointmentsFixed}) => ({appointmentsFixed:appointmentsFixed})
 export default connect(mapStateToProps)(PersonalAppointments);

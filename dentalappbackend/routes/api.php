@@ -29,6 +29,7 @@ Route::prefix('appointment')->group(function(){
         Route::get('/my-appointment', 'TimepickerController@myAppointment');
         Route::get('/available', 'TimepickerController@available');
         Route::put('/{id}', 'TimepickerController@update');
+        Route::put('cancel/{id}', 'TimepickerController@cancel');
     });
     Route::post('', 'TimepickerController@create');
     Route::get('', 'TimepickerController@getAll');

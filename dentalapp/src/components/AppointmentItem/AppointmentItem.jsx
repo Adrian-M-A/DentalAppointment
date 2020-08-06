@@ -7,16 +7,14 @@ import { connect } from 'react-redux';
 const AppointmentItem = ({appointment}) => {
     
     const appointmentSelected = (appointmentId, appointment) => {
-        console.log(appointment.id);
         const body = {
             'hour': appointment.hour,
             'day': appointment.day,
             'month': appointment.month,
             'year': appointment.year,
             'available': 0,        
-        }
-        console.log(body);
-        fixAppointment(appointmentId, body)
+        };
+        fixAppointment(appointmentId, body);
     };
 
 

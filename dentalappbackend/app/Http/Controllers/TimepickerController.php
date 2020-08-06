@@ -80,4 +80,28 @@ class TimepickerController extends Controller
         return response()->json(['message' => 'Appointment successfully deleted', 'appointment' => $appointment]);
     }
 
+    public function cancel(Request $request, $id)
+    {
+        $body = $request->all();
+        $validator = Validator::make($body, [
+            'hour' => 'required|string',
+            'day' => 'required|string',
+            'month' => 'required|string',
+            'year' => 'required|string',
+            'available' => 'required|boolean'
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'message' => 'There was a problem trying to update the appointment.',
+                'errors' => $validator->errors()
+            ], 400);
+        }
+
+        $appointment = Timepicker::find($id);
+        $appointment->update($body);
+        return $appointment;
+    }
+
 }
+

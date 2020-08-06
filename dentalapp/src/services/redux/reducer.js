@@ -5,7 +5,7 @@ const initialState = {
     user: {},
     appointmentsAvailable: [],
     appointmentSelected:  {},
-    fixedAppointments: []
+    appointmentsFixed: []
 }
 
 function reducer(state = initialState, action){
@@ -33,7 +33,7 @@ function reducer(state = initialState, action){
         case APPOINTMENTSFIXED:
             return {
                 ...state,
-                fixedAppointments: action.payload
+                appointmentsFixed: action.payload
             }
         default:
             return state;

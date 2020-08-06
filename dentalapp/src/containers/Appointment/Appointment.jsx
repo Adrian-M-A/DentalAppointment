@@ -1,6 +1,6 @@
 import React from 'react';
 import AppointmentsAvailable from '../../components/AppointmentsAvailable/AppointmentsAvailable.jsx';
-import FixedAppointments from '../../components/FixedAppointments/FixedAppointments.jsx';
+import AppointmentsFixed from '../../components/AppointmentsFixed/AppointmentsFixed.jsx';
 import axios from 'axios';
 
 import './Appointment.css';
@@ -39,7 +39,7 @@ class Appointment extends React.Component {
                         </div>
                     </div>
                     <AppointmentsAvailable />
-                    <FixedAppointments />
+                    <AppointmentsFixed />
                 </div>
             </div>
         )

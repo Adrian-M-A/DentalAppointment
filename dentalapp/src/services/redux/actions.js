@@ -30,16 +30,23 @@ export const fixAppointment = async (id, appointment) => {
         payload: res.data
     })
     appointmentsAvailable();
+    personalAppointment();
     return res;
 }
 
 export const personalAppointment = async() => {
     const res = await axios.get(backURL + 'appointment/my-appointment');
-    console.log(res);
     store.dispatch({
         type: APPOINTMENTSFIXED,
         payload: res.data
     })
 
+    return res;
+}
+
+export const cancelAppointment = async (id, appointment) => {
+    const res = await axios.put(backURL + 'appointment/cancel/' + id, appointment);
+    personalAppointment();
+    appointmentsAvailable();
     return res;
 }
