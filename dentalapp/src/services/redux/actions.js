@@ -1,7 +1,7 @@
 import axios from 'axios';
 import backURL from '../../config/api.js';
 import store from './store.js';
-import { LOGIN } from './types/user.js';
+import { LOGIN, STORE_EMAIL } from './types/user.js';
 import { APPOINTMENTSAVAILABLE, APPOINTMENTSELECTED, APPOINTMENTSFIXED } from './types/appointment.js';
 
 export const login = async(credentials) => {
@@ -49,4 +49,11 @@ export const cancelAppointment = async (id, appointment) => {
     personalAppointment();
     appointmentsAvailable();
     return res;
+}
+
+export const storeEmail = (email) => {
+    store.dispatch({
+        type: STORE_EMAIL,
+        payload: email
+    })
 }

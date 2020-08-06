@@ -1,11 +1,12 @@
-import { LOGIN, LOGOUT } from "./types/user";
+import { LOGIN, LOGOUT, STORE_EMAIL } from "./types/user";
 import { APPOINTMENTSAVAILABLE, APPOINTMENTSELECTED, APPOINTMENTSFIXED } from './types/appointment.js';
 
 const initialState = {
     user: {},
     appointmentsAvailable: [],
     appointmentSelected:  {},
-    appointmentsFixed: []
+    appointmentsFixed: [],
+    storeEmail: {}
 }
 
 function reducer(state = initialState, action){
@@ -34,6 +35,11 @@ function reducer(state = initialState, action){
             return {
                 ...state,
                 appointmentsFixed: action.payload
+            }
+        case STORE_EMAIL:
+            return {
+                ...state,
+                storeEmail: action.payload
             }
         default:
             return state;
