@@ -68,6 +68,7 @@ class TimepickerController extends Controller
         }
 
         $appointment = Timepicker::find($id);
+        $body['user_id'] = Auth::id();
         $appointment->update($body);
         return $appointment;
     }

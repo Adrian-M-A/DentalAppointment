@@ -1,11 +1,11 @@
-#personalAppointments{
+#fixedAppointments{
     display: flex;
     flex-direction: column;
     height: 40%;
     margin-top: 1rem;
 }
 
-#personalAppointmentsHeader{
+#fixedAppointmentsHeader{
     display: flex;
     justify-content: center;
     text-align: center;
@@ -14,7 +14,7 @@
     margin-top: 2rem;
 }
 
-#personalAppointmentsData{
+#fixedAppointmentsData{
     display: flex;
     border: 1px solid #94c6ce;
     height:100%;

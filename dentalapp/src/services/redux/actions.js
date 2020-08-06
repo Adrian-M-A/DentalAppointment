@@ -1,8 +1,8 @@
 import axios from 'axios';
 import backURL from '../../config/api.js';
 import store from './store.js';
-import { LOGIN, APPOINTMENTSAVAILABLE, APPOINTMENTSELECTED } from './types/user.js';
-
+import { LOGIN } from './types/user.js';
+import { APPOINTMENTSAVAILABLE, APPOINTMENTSELECTED, APPOINTMENTSFIXED } from './types/appointment.js';
 
 export const login = async(credentials) => {
     const res = await axios.post(backURL + 'user/login', credentials);
@@ -29,12 +29,17 @@ export const fixAppointment = async (id, appointment) => {
         type: APPOINTMENTSELECTED,
         payload: res.data
     })
-
+    appointmentsAvailable();
     return res;
 }
 
 export const personalAppointment = async() => {
     const res = await axios.get(backURL + 'appointment/my-appointment');
+    console.log(res);
+    store.dispatch({
+        type: APPOINTMENTSFIXED,
+        payload: res.data
+    })
 
     return res;
 }
