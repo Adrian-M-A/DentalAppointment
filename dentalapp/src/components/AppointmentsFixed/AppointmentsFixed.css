@@ -1,0 +1,23 @@
+#fixedAppointments{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    margin-top: 1rem;
+}
+
+#fixedAppointmentsHeader{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: #00abc7;
+    margin-top: 2rem;
+}
+
+#fixedAppointmentsData{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #94c6ce;
+    height:100%;
+    margin: 1rem;
+}

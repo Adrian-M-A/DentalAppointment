@@ -1,0 +1,119 @@
+#registerContainer{
+    display: flex;
+    justify-content: center;
+    height: 58.5rem;
+    background-image: url('../../img/background1.jpg');
+}
+
+#registerWindow {
+    background-color: white;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0.2rem 0.2rem 1rem black ;
+    border-radius: 1rem;
+    width: 70rem;
+    height: 38rem;
+}
+
+#registerHeader{
+    display: flex;
+    justify-content: center;
+    width: 70rem;
+    height: 8rem;
+}
+
+#registerLogoImage{
+    display: flex;
+    align-self: center; 
+    width: 8rem;
+    padding-top: 2rem;
+    cursor: pointer;
+}
+
+#registerFormInputs{
+    display: flex;
+    justify-content: flex-start;
+    width: 70rem;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: row;    
+    width: 70rem;
+}
+
+#registerFormLeft {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 2rem;
+}
+#registerFormRight {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    padding: 2rem;
+    width: 50%;
+}
+
+#nameinput, #surnamesinput, #phoneinput,
+#emailInput, #password1Input, #password2Input{
+    display: flex;
+    margin: 1rem;
+    padding: 0.5rem;
+    border: 0.1rem solid #00abc7;
+    border-top: 0rem;
+    border-left: 0rem;
+    border-right: 0rem;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::placeholder{
+    font-weight: bolder;
+}
+
+#registerH2{
+    color: #00abc7;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+}
+
+#registerButton{
+    background-color: #00abc7;
+    border: 0.2rem solid #00abc7;
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+    margin-top: 2rem;
+    box-shadow: 0rem 0.1rem 1.5rem rgb(149, 175, 166);
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#registerButton:hover{
+    background-color: #03bedb;
+    border: 0.2rem solid #03bedb;
+    color: white;
+    box-shadow: 0rem 0.5rem 1.5rem rgb(149, 175, 166);
+}
+
+#errorPassword, #errorPasswords, #errorName, #errorSurnames, #errorDocument, #errorRegister,
+#errorAddress, #errorPhone, #errorEmail {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:red;
+    display: flex;
+    justify-content: center;
+}
+
+#errorRegister{
+    padding-top: 1rem;
+}

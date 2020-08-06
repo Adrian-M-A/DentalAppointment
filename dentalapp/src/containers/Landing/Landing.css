@@ -1,0 +1,118 @@
+#body {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    color: #00abc7;
+
+}
+
+.section{
+    display: flex;
+    height: 57rem;
+    flex-direction: column;
+    padding-left: 10rem;
+    padding-top: 5rem;
+    
+}
+
+#first{
+    background-image: url("../../img/background1.jpg");
+}
+
+#logoLanding{
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    padding: 0rem 0rem 5rem 0rem;
+}
+
+.article{
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.title {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.subtitle{
+    padding: 0rem 0rem 1rem 0rem;
+    color: #94c6ce;
+}
+
+#emailInputLanding{
+    padding: 1.5rem;
+    width: 28rem;
+    border-radius: 0.5rem;
+    border:0.1rem solid #94c6ce;
+}
+
+#emailInputLanding::placeholder{
+    color: #48bacc;
+    font-size: large;
+    font-weight: bold;
+}
+
+#sponsors{
+    display: flex;
+    padding-top: 8rem;
+    flex-direction: column;
+    color:#94c6ce;
+}
+
+#sponsorsLogo{
+    display: flex;
+    width: 20rem;
+}
+
+#orderButtonLanding {
+    height: 3.3rem;
+    width: 12rem;
+    margin-left: -12.5rem;
+    background-color: #00abc7;
+    border: 0.1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    box-shadow: 0rem 0.1rem 1.5rem rgb(149, 175, 166);
+    transition: all ease 0.2s;
+}
+
+#orderButtonLanding:hover {
+    background-color: #03bedb;
+    box-shadow: 0rem 0.5rem 1.5rem rgb(149, 175, 166);
+}
+
+#second{
+    background-image: url("../../img/background2.jpg");
+    display: flex;
+    text-align: end;
+    flex-direction: column;
+    
+}
+#rightSecond{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 20rem 0 0;
+}
+
+.icon{
+    height: 3rem;
+    padding:0 1rem 0 1rem;
+}
+
+#icon2{
+    height: 4rem;
+    padding: 0 2rem 0 0;
+}
+
+#icon3{
+    height: 4rem;
+    padding: 0 2.7rem 0 0;
+}
+
+#maskIcon{
+    height: 3rem;
+}
