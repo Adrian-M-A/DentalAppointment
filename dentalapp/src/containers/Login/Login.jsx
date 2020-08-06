@@ -49,7 +49,7 @@ class Login extends React.Component {
                     <h2 id="loginH2">Pide cita sin esperas</h2>
                     <div id="loginFormInputs">
                         <form id="loginForm" onSubmit={this.onSubmit}>
-                            <input type="email" name="email" id="loginEmailInput" required value={this.props.storeEmail} placeholder="Introduce tu email"/>
+                            <input type="email" name="email" id="loginEmailInput" required placeholder={this.props.storeEmail || "Introduce tu email"}/>
                             <input type="password" name="password" id="loginPasswordInput" required placeholder="Introduce tu contraseña" />
                             <span id="errorLogin">{this.state.errorLogin}</span>
                             <button id="loginButton" type="submit">Entrar</button>
