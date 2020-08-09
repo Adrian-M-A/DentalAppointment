@@ -17,6 +17,7 @@ class Appointment extends React.Component {
     }
 
     logout = () => {
+
         axios.get(backURL + 'user/logout')
         .then(res => {
             localStorage.removeItem('authToken');
@@ -34,7 +35,7 @@ class Appointment extends React.Component {
                     <div id="headerAppointmentContent">
                         <img id="appointmentLogoImage" src={logo} alt="Imagen del logo" onClick={this.landing} />
                         <div id="userInfo">
-                            <div id="salutation"> Bienvenido {this.props.user?.name} </div>
+                            <div id="salutation"> Bienvenido/a {this.props.user?.name} </div>
                             <button id="logoutButton" onClick={this.logout}>Salir</button>
                         </div>
                     </div>

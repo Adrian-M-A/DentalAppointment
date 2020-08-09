@@ -50,10 +50,21 @@ Second, rename .env.example file as .env
 
 Third, create a DB called Laravel in MSQL.
 
-Fourth, migrate all the tables.
+Fourth, require laravel passport:
 ```
-php artisan migrate
+$ composer require laravel/passport
+``` 
+
+Fifth, migrate all the tables:
 ```
+$ php artisan migrate
+```
+
+Sixth, install passport:
+```
+$ php artisan passport:install
+```
+
 If you want to see some posible appointments you should fill your timepicker table with some information about the appointment (hour, day, month, year, etc.).
 <br>
 <br>
